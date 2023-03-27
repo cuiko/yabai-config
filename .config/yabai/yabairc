@@ -13,6 +13,8 @@ sudo yabai --load-sa
 # only load apps that need to be managed
 apps=$(awk -v ORS='|' '{if($0!="") print $0}' $XDG_CONFIG_HOME/yabai/yabaimanaged)
 yabai -m rule --add app!="^${apps%?}$" manage=off
+# ignore pip window
+yabai -m rule --add subrole="^AXSystemDialog$" manage=off mouse_follows_focus=off
 
 # debug output
 yabai -m config debug_output off
