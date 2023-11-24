@@ -99,3 +99,10 @@ cp -R yabai/.hammerspoon ~
 # stow
 stow yabai
 ```
+#### Q&A
+
+1. Why do some commands not work after I upgraded yabai?
+
+When you upgrade yabai, the hash of the yabai binary file was changed, and you need to modify sudoers again.
+
+Follow yabai wiki's [configure-scripting-addition](https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)#configure-scripting-addition).
