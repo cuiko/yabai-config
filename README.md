@@ -3,7 +3,7 @@
 #### Requirement
 - [yabai](https://github.com/koekeishiya/yabai) 主程序, C/S 模式, 服务端负责解析参数, 操作窗体, 客户端通过`jq`发送参数
 - [skhd](https://github.com/koekeishiya/skhd) 快捷键映射
-- [limelight](https://github.com/koekeishiya/limelight) 窗体边框显示增强
+- ~~[limelight](https://github.com/koekeishiya/limelight) 窗体边框显示增强~~
 - [spacebar](https://github.com/cmacrae/spacebar) 菜单栏(可选)
 - ~~[simple-bar](https://github.com/Jean-Tinland/simple-bar) 菜单栏增强(可选)~~
 - [stackline](https://github.com/AdamWagner/stackline) stack 图形化展示(可选)
