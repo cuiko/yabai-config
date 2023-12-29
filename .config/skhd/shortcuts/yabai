@@ -9,7 +9,7 @@
 # restart yabai and skhd
 ctrl + cmd + shift - r: /usr/bin/env osascript <<< \
                         "display notification \"Restarting Yabai\" with title \"Yabai\""; \
-                        brew services restart yabai && brew services restart skhd
+                        yabai --restart-service && skhd --restart-service
 
 # set layout of the space
 ctrl + cmd + shift - 0x32 : yabai -m space --layout float
