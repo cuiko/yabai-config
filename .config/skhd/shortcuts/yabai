@@ -4,6 +4,7 @@
 # 0x2C /
 # 0x32 `
 # 0x2A \
+# 0x18 =
 
 # ====== configs (ctrl + cmd + shift) ======
 # restart yabai and skhd
@@ -98,7 +99,7 @@ alt + shift - n : yabai -m space --create && \
                   yabai -m space --focus "${index}"
 
 # reblance current space window size
-alt - backspace: yabai -m space --balance
+ctrl + alt - 0x18 : yabai -m space --balance
 
 # rotate the window tree clock-wise (options: 90, 180, 270 degree)
 alt - r         : yabai -m space --rotate 270
@@ -125,23 +126,23 @@ shift + alt - k : yabai -m window --swap north
 shift + alt - l : yabai -m window --swap east
 
 # resize window
-ctrl + alt - h : \
+ctrl + alt - left : \
     yabai -m window --resize left:-20:0; \
     yabai -m window --resize right:-20:0
-ctrl + alt - j : \
+ctrl + alt - down : \
     yabai -m window --resize bottom:0:20; \
     yabai -m window --resize top:0:20
-ctrl + alt - k : \
+ctrl + alt - up : \
     yabai -m window --resize top:0:-20; \
     yabai -m window --resize bottom:0:-20
-ctrl + alt - l : \
+ctrl + alt - right : \
     yabai -m window --resize right:20:0; \
     yabai -m window --resize left:20:0
 
 # window focus
-ctrl + alt - 0x2B : yabai -m window --focus prev || yabai -m window --focus last
-ctrl + alt - 0x2F : yabai -m window --focus next || yabai -m window --focus first
-ctrl + alt - 0x2C : yabai -m window --focus recent
+# ctrl + alt - 0x2B : yabai -m window --focus prev || yabai -m window --focus last
+# ctrl + alt - 0x2F : yabai -m window --focus next || yabai -m window --focus first
+# ctrl + alt - 0x2C : yabai -m window --focus recent
 
 # magnet style
 ctrl + alt - return         : yabai -m window --toggle zoom-fullscreen; yabai -m window --grid 1:1:0:0:1:1
@@ -171,8 +172,8 @@ ctrl + alt + shift - l : yabai -m window --insert east
 ctrl + alt - p : yabai -m window --focus stack.prev || yabai -m window --focus stack.last
 ctrl + alt - n : yabai -m window --focus stack.next || yabai -m window --focus stack.first
 ctrl + alt - d : yabai -m window --toggle float && yabai -m window --toggle float
-ctrl + alt - left  : yabai -m window west  --stack $(yabai -m query --windows --window | jq -r '.id')
-ctrl + alt - down  : yabai -m window south --stack $(yabai -m query --windows --window | jq -r '.id')
-ctrl + alt - up    : yabai -m window north --stack $(yabai -m query --windows --window | jq -r '.id')
-ctrl + alt - right : yabai -m window east  --stack $(yabai -m query --windows --window | jq -r '.id')
+ctrl + alt - h  : yabai -m window west  --stack $(yabai -m query --windows --window | jq -r '.id')
+ctrl + alt - j  : yabai -m window south --stack $(yabai -m query --windows --window | jq -r '.id')
+ctrl + alt - k    : yabai -m window north --stack $(yabai -m query --windows --window | jq -r '.id')
+ctrl + alt - l : yabai -m window east  --stack $(yabai -m query --windows --window | jq -r '.id')
 
